@@ -1,13 +1,18 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:manager_app/routes/app_route.dart';
 
-import '../../main.dart'; 
+import '../../main.dart';
 
+@RoutePage()
 class HomeScreen extends StatelessWidget {
+  const HomeScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
+        title: const Text('Home Screen'),
       ),
       body: Center(
         child: Column(
@@ -16,9 +21,9 @@ class HomeScreen extends StatelessWidget {
             Text('Welcome to ${AppConfig.instance.appName}'),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushNamed(context, RouteNames.counter);
+                context.router.push(const CounterRoute());
               },
-              child: Text('Go to Counter Screen'),
+              child: const Text('Go to Counter Screen'),
             ),
           ],
         ),
