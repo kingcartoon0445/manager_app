@@ -6,19 +6,31 @@ export 'package:manager_app/config/app_config.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:manager_app/bloc/counter/counter_bloc.dart';
 import 'config/app_config.dart';
+import 'config/di.dart';
 import 'config/res/size_config.dart';
+import 'generated/codegen_loader.g.dart';
 import 'routes/app_route.dart';
+import 'services/language_service.dart';
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 GlobalKey<NavigatorState>? navigatorKey = GlobalKey<NavigatorState>();
 final _appRouter = AppRouter();
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+
+  configureDependencies();
   AppConfig.init(environment: 'dev'); // Khởi tạo cấu hình cho môi trường
 
   runApp(LayoutBuilder(builder: (context, constraints) {
     SizeConfig.instance
         .init(constraints: constraints, screenHeight: 812, screenWidth: 375);
-    return const MyApp();
+    return EasyLocalization(
+        supportedLocales: supportedLocales,
+        path: 'assets/lang',
+        assetLoader: const CodegenLoader(),
+        fallbackLocale: english,
+        child: const MyApp());
   }));
 }
 

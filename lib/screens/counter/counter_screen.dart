@@ -31,6 +31,7 @@ class CounterScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
+            heroTag: "btn1",
             onPressed: () {
               counterBloc.add(Increment());
             },
@@ -39,6 +40,7 @@ class CounterScreen extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           FloatingActionButton(
+            heroTag: "btn2",
             onPressed: () {
               counterBloc.add(Decrement());
             },
