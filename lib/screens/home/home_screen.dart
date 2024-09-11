@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('welcome').tr(),
+        title: const Text('welcome').tr(),
       ),
       body: Center(
         child: Column(
@@ -19,7 +19,7 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, RouteNames.counter);
               },
-              child: Text('Go to Counter Screen'),
+              child: const Text('Go to Counter Screen'),
             ),
           ],
         ),

@@ -14,7 +14,7 @@ void main() {
 
   runApp(
     EasyLocalization(
-      supportedLocales: [const Locale('en', 'US'), const Locale('vi', 'VN')],
+      supportedLocales: const [Locale('en', 'US'), Locale('vi', 'VN')],
       path: 'assets/langs', // Đường dẫn đến thư mục chứa file JSON
       fallbackLocale: const Locale('en', 'US'),
       startLocale: const Locale('vi', 'VN'),
