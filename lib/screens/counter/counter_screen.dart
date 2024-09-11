@@ -1,24 +1,28 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:manager_app/bloc/counter/counter_bloc.dart';
 import 'package:manager_app/bloc/counter/counter_event.dart';
 import 'package:manager_app/bloc/counter/counter_state.dart';
 
+@RoutePage()
 class CounterScreen extends StatelessWidget {
+  const CounterScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     final counterBloc = BlocProvider.of<CounterBloc>(context);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter Screen'),
+        title: const Text('Counter Screen'),
       ),
       body: Center(
         child: BlocBuilder<CounterBloc, CounterState>(
           builder: (context, state) {
             return Text(
               'Counter Value: ${state.counterValue}',
-              style: TextStyle(fontSize: 24),
+              style: const TextStyle(fontSize: 24),
             );
           },
         ),
@@ -31,15 +35,15 @@ class CounterScreen extends StatelessWidget {
               counterBloc.add(Increment());
             },
             tooltip: 'Increment',
-            child: Icon(Icons.add),
+            child: const Icon(Icons.add),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           FloatingActionButton(
             onPressed: () {
               counterBloc.add(Decrement());
             },
             tooltip: 'Decrement',
-            child: Icon(Icons.remove),
+            child: const Icon(Icons.remove),
           ),
         ],
       ),
