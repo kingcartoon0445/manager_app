@@ -38,6 +38,26 @@ class $AssetsFontsGen {
   List<String> get values => [cairoRegular, dMSansRegular, robotoRegular];
 }
 
+class $AssetsIconsGen {
+  const $AssetsIconsGen();
+
+  /// File path: assets/icons/information.png
+  AssetGenImage get information =>
+      const AssetGenImage('assets/icons/information.png');
+
+  /// File path: assets/icons/location.svg
+  SvgGenImage get location => const SvgGenImage('assets/icons/location.svg');
+
+  /// File path: assets/icons/setting.png
+  AssetGenImage get setting => const AssetGenImage('assets/icons/setting.png');
+
+  /// File path: assets/icons/table.svg
+  SvgGenImage get table => const SvgGenImage('assets/icons/table.svg');
+
+  /// List of all assets
+  List<dynamic> get values => [information, location, setting, table];
+}
+
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
@@ -48,6 +68,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/device_linked.png
   AssetGenImage get deviceLinked =>
       const AssetGenImage('assets/images/device_linked.png');
+
+  /// File path: assets/images/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
   /// File path: assets/images/logo_splash_screen.png
   AssetGenImage get logoSplashScreen =>
@@ -79,6 +102,7 @@ class $AssetsImagesGen {
   List<dynamic> get values => [
         accessViaKeyword,
         deviceLinked,
+        logo,
         logoSplashScreen,
         logoSplashScreen2,
         logoSplashScreenBg,
@@ -110,6 +134,7 @@ class Assets {
 
   static const $AssetsColorsGen colors = $AssetsColorsGen();
   static const $AssetsFontsGen fonts = $AssetsFontsGen();
+  static const $AssetsIconsGen icons = $AssetsIconsGen();
   static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsLangGen lang = $AssetsLangGen();
 }

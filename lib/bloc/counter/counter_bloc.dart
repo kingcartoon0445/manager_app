@@ -11,5 +11,6 @@ class CounterBloc extends Bloc<CounterEvent, CounterState> {
     on<Decrement>((event, emit) {
       emit(CounterState(counterValue: state.counterValue - 1));
     });
+    
   }
 }

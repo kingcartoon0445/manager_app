@@ -28,6 +28,9 @@ class ColorName {
   /// Color: #0C0C0C
   static const Color colorBlack = Color(0xFF0C0C0C);
 
+  /// Color: #FF0000
+  static const Color colorBusy = Color(0xFFFF0000);
+
   /// Color: #0E141C
   static const Color colorCardDark = Color(0xFF0E141C);
 
@@ -49,11 +52,20 @@ class ColorName {
   /// Color: #838589
   static const Color colorFontSecondaryLight = Color(0xFF838589);
 
+  /// Color: #11DA00
+  static const Color colorFree = Color(0xFF11DA00);
+
   /// Color: #F5F5F5
   static const Color colorGrey1 = Color(0xFFF5F5F5);
 
   /// Color: #B8B8B8
   static const Color colorGrey2 = Color(0xFFB8B8B8);
+
+  /// Color: #D9D9D9
+  static const Color colorGrey3 = Color(0xFFD9D9D9);
+
+  /// Color: #676767
+  static const Color colorGrey4 = Color(0xFF676767);
 
   /// Color: #C4C5C4
   static const Color colorPlaceHolderDark = Color(0xFFC4C5C4);
