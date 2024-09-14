@@ -24,5 +24,9 @@
     "BackToHome":"Trở về trang chủ",
     "localizedReason":"Vui lòng xác thực để hiển thị số dư tài khoản",
     "AuthMessages":"Không, cảm ơn",
-    "biometricFail":"Không hỗ trợ sinh trắc học"
+    "biometricFail":"Không hỗ trợ sinh trắc học",
+    "orderedFood":"Đã order món",
+    "alreadyBooked":"Đã có người đặt",
+    "noOneBookedYet":"Chưa có người đặt",
+    "codeFlutter": "mã Flutter"
 }

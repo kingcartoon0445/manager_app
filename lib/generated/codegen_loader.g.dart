@@ -68,7 +68,11 @@ static const Map<String,dynamic> en_US = {
   "BackToHome": "Back to Home",
   "localizedReason": "Please authenticate to show account balance",
   "AuthMessages": "No Thank",
-  "biometricFail": "Don't support biomestrics"
+  "biometricFail": "Don't support biomestrics",
+  "orderedFood": "Ordered food",
+  "alreadyBooked": "Already booked",
+  "noOneBookedYet": "No one booked yet",
+  "codeFlutter": "Code Flutter"
 };
 static const Map<String,dynamic> vi_VN = {
   "welcomeTo": "Chào mừng đến với",
@@ -96,7 +100,11 @@ static const Map<String,dynamic> vi_VN = {
   "BackToHome": "Trở về trang chủ",
   "localizedReason": "Vui lòng xác thực để hiển thị số dư tài khoản",
   "AuthMessages": "Không, cảm ơn",
-  "biometricFail": "Không hỗ trợ sinh trắc học"
+  "biometricFail": "Không hỗ trợ sinh trắc học",
+  "orderedFood": "Đã order món",
+  "alreadyBooked": "Đã có người đặt",
+  "noOneBookedYet": "Chưa có người đặt",
+  "codeFlutter": "mã Flutter"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"zh_CN": zh_CN, "en_US": en_US, "vi_VN": vi_VN};
 }

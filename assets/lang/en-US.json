@@ -24,5 +24,9 @@
     "BackToHome":"Back to Home",
     "localizedReason":"Please authenticate to show account balance",
     "AuthMessages":"No Thank",
-    "biometricFail":"Don't support biomestrics"
+    "biometricFail":"Don't support biomestrics",
+    "orderedFood":"Ordered food",
+    "alreadyBooked":"Already booked",
+    "noOneBookedYet":"No one booked yet",
+    "codeFlutter":"Code Flutter"
 }

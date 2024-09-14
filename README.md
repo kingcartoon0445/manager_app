@@ -126,3 +126,5 @@ Use FlutterGen
 ```ruby
 dart run build_runner build
 ```
+# Thay đổi màn hình splash Screen
+flutter pub run flutter_native_splash:create
