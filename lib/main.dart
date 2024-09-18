@@ -19,7 +19,7 @@ final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
 GlobalKey<NavigatorState>? navigatorKey = GlobalKey<NavigatorState>();
 final _appRouter = AppRouter();
 void main() async {
-    WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -47,7 +47,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-    @override
+  @override
   void initState() {
     super.initState();
     initialization();
@@ -67,21 +67,19 @@ class _MyAppState extends State<MyApp> {
     print('go!');
     FlutterNativeSplash.remove();
   }
-  
+
+  @override
   Widget build(BuildContext context) {
-    return 
-    MultiBlocProvider(
+    return MultiBlocProvider(
         providers: [
           BlocProvider(
               create: (context) => CounterBloc()), // Đăng ký CounterBloc
-        BlocProvider(
-              create: (context) => HomeBloc()), // Đăng ký HomeBloc
-      
+          BlocProvider(create: (context) => HomeBloc()), // Đăng ký HomeBloc
         ],
         child: MaterialApp.router(
-          theme: ThemeData(fontFamily: GoogleFonts.archivo ().fontFamily,
-          textTheme:TextTheme()
-          ),
+          theme: ThemeData(
+              fontFamily: GoogleFonts.archivo().fontFamily,
+              textTheme: const TextTheme()),
           routerConfig: _appRouter.config(
               navigatorObservers: () => [
                     routeObserver,

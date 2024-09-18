@@ -104,6 +104,10 @@ flutter:
     - assets/icons/
     - assets/colors/
     - assets/images/logo.png
+    - assets/images/booking.png
+    - assets/images/take_a_table.png
+    - assets/images/icon_arrow.png
+    - assets/images/icon_table.png
 flutter_gen:
   output: lib/gen/ # Optional (default: lib/gen/)
   line_length: 80 # Optional (default: 80)
