@@ -8,6 +8,7 @@ import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:manager_app/bloc/counter/counter_bloc.dart';
 import 'package:manager_app/bloc/home/home_bloc.dart';
+import 'package:manager_app/bloc/infomation_customer/infomation_customer_bloc.dart';
 import 'config/app_config.dart';
 import 'config/di.dart';
 import 'config/res/size_config.dart';
@@ -76,6 +77,8 @@ class _MyAppState extends State<MyApp> {
               create: (context) => CounterBloc()), // Đăng ký CounterBloc
         BlocProvider(
               create: (context) => HomeBloc()), // Đăng ký HomeBloc
+        BlocProvider(
+              create: (context) => InfomationCustomerBloc()), // Đăng ký HomeBloc
       
         ],
         child: MaterialApp.router(

@@ -1,20 +1,16 @@
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:manager_app/gen/colors.gen.dart';
-import '../../widget/appBar.dart';
-import 'widget/page_tables.dart';
+import 'package:manager_app/export_global.dart';
+import 'package:manager_app/widget/appBar.dart';
 
+class MenuTypeFoodScreen extends StatelessWidget {
+  const MenuTypeFoodScreen({super.key});
 @RoutePage()
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:AppBarGlobal(
-          context: context,
-          title: Column(
+      appBar: AppBarGlobal(
+        context: context,
+        title: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               Image.asset("assets/icons/setting.png"),
@@ -53,27 +49,7 @@ class HomeScreen extends StatelessWidget {
               )
             ],
           ), 
-         ),
-        
-          
-        body: PageTables(
-          quantityTable: 34,
-        ));
+        ),
+    );
   }
 }
-
-//  Center(
-//         child: Column(
-//           mainAxisAlignment: MainAxisAlignment.center,
-//           children: [
-//             Text('Welcome to ${AppConfig.instance.appName}'),
-//             ElevatedButton(
-//               onPressed: () {
-//                 context.router.push(const CounterRoute());
-//               },
-//               child: const Text('Go to Counter Screen'),
-//             ),
-            
-//           ],
-//         ),
-//       ),

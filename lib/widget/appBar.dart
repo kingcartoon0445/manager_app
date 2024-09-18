@@ -1,13 +1,23 @@
 
 import 'package:manager_app/export_global.dart';
 
-PreferredSizeWidget AppBarGlobal({required  Widget title}){
+PreferredSizeWidget AppBarGlobal({required  Widget title, required BuildContext context,bool showBack=false}){
   return AppBar(
     automaticallyImplyLeading:false,
           toolbarHeight: 140,
           title: title
           
          ,
+         leading: showBack?   InkWell(
+              onTap: () {
+                context.router.maybePop();
+              },
+              child: Image.asset(
+                "assets/icons/back.png",
+                height: 50,
+              ),
+            ):null,
+        
           bottom: PreferredSize(
             preferredSize: const Size.fromHeight(1.0), // Chiều cao của đường kẻ
             child: Container(
