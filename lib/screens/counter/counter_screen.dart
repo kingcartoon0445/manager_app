@@ -20,7 +20,8 @@ class CounterScreen extends StatelessWidget {
       body: Center(
         child: BlocBuilder<CounterBloc, CounterState>(
           builder: (context, state) {
-            return Image.network("https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhat--Dem-Sai-G.jpg");
+            return Image.network(
+                "https://media-cdn-v2.laodong.vn/storage/newsportal/2023/8/26/1233821/Giai-Nhat--Dem-Sai-G.jpg");
           },
         ),
       ),
