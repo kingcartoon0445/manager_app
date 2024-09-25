@@ -40,7 +40,8 @@ class CodegenLoader extends AssetLoader{
   "BackToHome": "返回首页",
   "localizedReason": "请验证以显示账户余额",
   "AuthMessages": "不，谢谢",
-  "biometricFail": "不支持生物识别"
+  "biometricFail": "不支持生物识别",
+  "theMenuIsEmpty": "Thực đơn trống rỗng"
 };
 static const Map<String,dynamic> en_US = {
   "welcomeTo": "Welcome to",
@@ -72,7 +73,12 @@ static const Map<String,dynamic> en_US = {
   "orderedFood": "Ordered food",
   "alreadyBooked": "Already booked",
   "noOneBookedYet": "No one booked yet",
-  "codeFlutter": "Code Flutter"
+  "codeFlutter": "Code Flutter",
+  "theMenuIsEmpty": "The menu is empty",
+  "settingMenu": "Setting menu",
+  "createProductCategories": "Create product categories",
+  "createDishes": "Create dishes",
+  "addUsingExcel": "Add using excel"
 };
 static const Map<String,dynamic> vi_VN = {
   "welcomeTo": "Chào mừng đến với",
@@ -104,7 +110,12 @@ static const Map<String,dynamic> vi_VN = {
   "orderedFood": "Đã order món",
   "alreadyBooked": "Đã có người đặt",
   "noOneBookedYet": "Chưa có người đặt",
-  "codeFlutter": "mã Flutter"
+  "codeFlutter": "mã Flutter",
+  "theMenuIsEmpty": "Thực đơn trống rỗng",
+  "settingMenu": "Cài đặt thực đơn",
+  "createProductCategories": "Tạo loại món",
+  "createDishes": "Tạo món ăn",
+  "addUsingExcel": "Thêm bằng excel"
 };
 static const Map<String, Map<String,dynamic>> mapLocales = {"zh_CN": zh_CN, "en_US": en_US, "vi_VN": vi_VN};
 }

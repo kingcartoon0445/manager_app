@@ -2,54 +2,76 @@ import 'package:flutter/material.dart';
 import 'package:manager_app/export_global.dart';
 import 'package:manager_app/widget/appBar.dart';
 
+import 'widget/carosel_list_item.dart';
+import 'widget/drawer_cart.dart';
+import 'widget/no_menu.dart';
+
+@RoutePage()
 class MenuTypeFoodScreen extends StatelessWidget {
   const MenuTypeFoodScreen({super.key});
-@RoutePage()
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBarGlobal(
-        context: context,
-        title: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-              Image.asset("assets/icons/setting.png"),
-              ListTile(
-                title: const Center(
-                    child: Text(
-                  'FOOD & LIFE',
-                  style: TextStyle(
-                      color: ColorName.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 32),
-                )),
-                subtitle: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SvgPicture.asset(
-                        "assets/icons/location.svg",
-                        height: 15,
-                        color: ColorName.colorGrey2,
-                      ),
-                      const SizedBox(
-                        width: 3,
-                      ),
-                      const Text(
-                        "Haidilao Huoguo 海底捞火锅 Vincom Phan Văn Trị",
-                        style: TextStyle(
-                            color: ColorName.colorGrey2, fontSize: 10),
-                      )
-                    ],
-                  ),
+    return Builder(builder: (context) {
+      return Scaffold(
+          appBar: AppBarGlobal(
+            showBack: true,
+            context: context,
+            title: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Image.asset(
+                      "assets/icons/nia.png",
+                      height: 45,
+                    ),
+                      Text(
+                      "Select to",
+                      style:
+                          context.textTheme.headlineMedium
+                    )
+                  ],
                 ),
-              ),
+                 Text(
+                  "YOUR FOOD",
+                  style: context.textTheme.displayLarge
+                ),
+                const SizedBox(
+                  height: 10,
+                )
+              ],
+            ),
+            action: [
+              Builder(builder: (context1) {
+                return InkWell(
+                  onTap: () {
+                    Scaffold.of(context1).openEndDrawer();
+                  },
+                  child: Image.asset(
+                    "assets/icons/cart.png",
+                    scale: 1.8,
+                  ),
+                );
+              }),
               const SizedBox(
-                height: 10,
+                width: 10,
               )
             ],
-          ), 
-        ),
-    );
+          ),
+          
+          endDrawer: const DrawerCart(),
+          body: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: globalData.categories.isEmpty
+                ? const NoMenuScreen()
+                : CaroselListItem(
+                    quantityTable: globalData.categories.length,
+                  ),
+          ));
+    });
   }
 }

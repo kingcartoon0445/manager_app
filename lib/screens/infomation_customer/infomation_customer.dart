@@ -5,7 +5,9 @@ import 'package:intl/intl.dart';
 import 'package:manager_app/bloc/infomation_customer/export_infomation_customer_bloc.dart';
 import 'package:manager_app/bloc/infomation_customer/infomation_customer_bloc.dart';
 import 'package:manager_app/gen/colors.gen.dart';
+import 'package:manager_app/routes/app_route.dart';
 import 'package:manager_app/widget/appBar.dart';
+import 'package:manager_app/widget/theme_app.dart';
 
 import '../../export_global.dart';
 import 'widget/text_filed_information.dart';
@@ -52,22 +54,17 @@ class InfomationCustomerScreen extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Text(
-                  "Your",
-                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 24),
-                ),
+                Text("Your", style: context.textTheme.bigHeadlineLarge),
                 Image.asset(
                   "assets/icons/information.png",
                   height: 55,
                 )
               ],
             ),
-            const Text(
-              "INFORMATION",
-              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 40),
-            ),
+            Text("INFORMATION", style: context.textTheme.bigDisplayLarge),
           ],
-        ), context: context,
+        ),
+        context: context,
       ),
       body: InkWell(
         onTap: () {
@@ -144,10 +141,8 @@ class InfomationCustomerScreen extends StatelessWidget {
                             // use the intl package to format the value based on the
                             // user's locale settings.
                             child: Text(
-                              '${ state.dateTime.month}-${ state.dateTime.day}-${ state.dateTime.year}',
-                              style: const TextStyle(
-                                  fontSize: 20.0, fontWeight: FontWeight.bold),
-                            ),
+                                '${state.dateTime.month}-${state.dateTime.day}-${state.dateTime.year}',
+                                style: context.textTheme.headlineLarge),
                           ),
                         ],
                       ),
@@ -156,15 +151,12 @@ class InfomationCustomerScreen extends StatelessWidget {
                       ),
                       _DatePickerItem(
                         children: <Widget>[
-                          const Text(
-                            'Time',
-                            style: TextStyle(fontSize: 10),
-                          ),
+                          Text('Time', style: context.textTheme.miniLabelSmall),
                           InkWell(
                             // Display a CupertinoDatePicker in time picker mode.
                             onTap: () => _showDialog(
                               CupertinoDatePicker(
-                                initialDateTime:  state.dateTime,
+                                initialDateTime: state.dateTime,
                                 mode: CupertinoDatePickerMode.time,
                                 use24hFormat: true,
                                 // This is called when the user changes the time.
@@ -185,10 +177,8 @@ class InfomationCustomerScreen extends StatelessWidget {
                             // You can use the intl package to format the value based on
                             // the user's locale settings.
                             child: Text(
-                              DateFormat('HH:mm a').format( state.dateTime),
-                              style: const TextStyle(
-                                  fontSize: 20.0, fontWeight: FontWeight.bold),
-                            ),
+                                DateFormat('HH:mm a').format(state.dateTime),
+                                style: context.textTheme.headlineLarge),
                           ),
                         ],
                       ),
@@ -215,21 +205,25 @@ class InfomationCustomerScreen extends StatelessWidget {
                 height: 50,
               ),
             ),
-            Container(
-              height: 50,
-              width: 300,
-              decoration: BoxDecoration(
-                color: ColorName.colorGrey3,
-                borderRadius: BorderRadius.circular(8),
-              ),
-              child: const Center(
-                  child: Text(
-                "Next",
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
+            InkWell(
+              onTap: () {
+                context.router.push(const ConformBookingRoute());
+              },
+              child: Container(
+                height: 50,
+                width: 300,
+                decoration: BoxDecoration(
+                  color: ColorName.colorGrey3,
+                  borderRadius: BorderRadius.circular(8),
+                ),
+                child: Center(
+                    child: Text(
+                  "Next",
+                  style: context.textTheme.headlineLarge!.copyWith(
                     color: ColorName.colorGrey4,
-                    fontSize: 20),
-              )),
+                  ),
+                )),
+              ),
             ),
           ],
         ),
