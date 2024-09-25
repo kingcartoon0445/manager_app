@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manager_app/export_global.dart';
 import 'package:manager_app/gen/colors.gen.dart';
 
 class Note extends StatelessWidget {
@@ -22,10 +23,9 @@ class Note extends StatelessWidget {
           width: 5,
         ),
         Text(text,
-            style: const TextStyle(
-                color: ColorName.colorGrey4,
-                fontSize: 16,
-                fontWeight: FontWeight.w600))
+            style: context.textTheme.bodyMedium!.copyWith( color: ColorName.colorGrey4,)
+            
+        )
       ],
     );
   }

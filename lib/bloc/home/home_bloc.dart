@@ -1,5 +1,5 @@
 
-import 'export_bloc.dart'; 
+import 'export_home_bloc.dart'; 
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
   HomeBloc() : super(HomeState(indexCarousel: 0)) {

@@ -41,6 +41,18 @@ class $AssetsFontsGen {
 class $AssetsIconsGen {
   const $AssetsIconsGen();
 
+  /// File path: assets/icons/back.png
+  AssetGenImage get back => const AssetGenImage('assets/icons/back.png');
+
+  /// File path: assets/icons/cart.png
+  AssetGenImage get cart => const AssetGenImage('assets/icons/cart.png');
+
+  /// File path: assets/icons/excel.png
+  AssetGenImage get excel => const AssetGenImage('assets/icons/excel.png');
+
+  /// File path: assets/icons/food_bar.png
+  AssetGenImage get foodBar => const AssetGenImage('assets/icons/food_bar.png');
+
   /// File path: assets/icons/information.png
   AssetGenImage get information =>
       const AssetGenImage('assets/icons/information.png');
@@ -48,14 +60,35 @@ class $AssetsIconsGen {
   /// File path: assets/icons/location.svg
   SvgGenImage get location => const SvgGenImage('assets/icons/location.svg');
 
+  /// File path: assets/icons/meat.png
+  AssetGenImage get meat => const AssetGenImage('assets/icons/meat.png');
+
+  /// File path: assets/icons/nia.png
+  AssetGenImage get nia => const AssetGenImage('assets/icons/nia.png');
+
   /// File path: assets/icons/setting.png
   AssetGenImage get setting => const AssetGenImage('assets/icons/setting.png');
 
+  /// File path: assets/icons/table.png
+  AssetGenImage get tablePng => const AssetGenImage('assets/icons/table.png');
+
   /// File path: assets/icons/table.svg
-  SvgGenImage get table => const SvgGenImage('assets/icons/table.svg');
+  SvgGenImage get tableSvg => const SvgGenImage('assets/icons/table.svg');
 
   /// List of all assets
-  List<dynamic> get values => [information, location, setting, table];
+  List<dynamic> get values => [
+        back,
+        cart,
+        excel,
+        foodBar,
+        information,
+        location,
+        meat,
+        nia,
+        setting,
+        tablePng,
+        tableSvg
+      ];
 }
 
 class $AssetsImagesGen {
@@ -65,9 +98,16 @@ class $AssetsImagesGen {
   AssetGenImage get accessViaKeyword =>
       const AssetGenImage('assets/images/access_via_keyword.png');
 
+  /// File path: assets/images/demo_meet.png
+  AssetGenImage get demoMeet =>
+      const AssetGenImage('assets/images/demo_meet.png');
+
   /// File path: assets/images/device_linked.png
   AssetGenImage get deviceLinked =>
       const AssetGenImage('assets/images/device_linked.png');
+
+  /// File path: assets/images/fish.png
+  AssetGenImage get fish => const AssetGenImage('assets/images/fish.png');
 
   /// File path: assets/images/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
@@ -84,12 +124,25 @@ class $AssetsImagesGen {
   SvgGenImage get logoSplashScreenBg =>
       const SvgGenImage('assets/images/logo_splash_screen_bg.svg');
 
+  /// File path: assets/images/meet.png
+  AssetGenImage get meet => const AssetGenImage('assets/images/meet.png');
+
+  /// File path: assets/images/msp.htm
+  String get msp => 'assets/images/msp.htm';
+
+  /// File path: assets/images/no_menu.png
+  AssetGenImage get noMenu => const AssetGenImage('assets/images/no_menu.png');
+
   /// File path: assets/images/unvisible.svg
   SvgGenImage get unvisible => const SvgGenImage('assets/images/unvisible.svg');
 
   /// File path: assets/images/vector_splash_screen.svg
   SvgGenImage get vectorSplashScreen =>
       const SvgGenImage('assets/images/vector_splash_screen.svg');
+
+  /// File path: assets/images/vegetarian.png
+  AssetGenImage get vegetarian =>
+      const AssetGenImage('assets/images/vegetarian.png');
 
   /// File path: assets/images/verify_digit.png
   AssetGenImage get verifyDigit =>
@@ -101,13 +154,19 @@ class $AssetsImagesGen {
   /// List of all assets
   List<dynamic> get values => [
         accessViaKeyword,
+        demoMeet,
         deviceLinked,
+        fish,
         logo,
         logoSplashScreen,
         logoSplashScreen2,
         logoSplashScreenBg,
+        meet,
+        msp,
+        noMenu,
         unvisible,
         vectorSplashScreen,
+        vegetarian,
         verifyDigit,
         visible
       ];

@@ -28,5 +28,10 @@
     "orderedFood":"Ordered food",
     "alreadyBooked":"Already booked",
     "noOneBookedYet":"No one booked yet",
-    "codeFlutter":"Code Flutter"
+    "codeFlutter":"Code Flutter",
+    "theMenuIsEmpty":"The menu is empty",
+    "settingMenu":"Setting menu",
+    "createProductCategories":"Create product categories",
+    "createDishes":"Create dishes",
+    "addUsingExcel":"Add using excel"
 }

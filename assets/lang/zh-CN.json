@@ -24,5 +24,6 @@
     "BackToHome":"返回首页",
     "localizedReason":"请验证以显示账户余额",
     "AuthMessages":"不，谢谢",
-    "biometricFail":"不支持生物识别"
+    "biometricFail":"不支持生物识别",
+     "theMenuIsEmpty":"Thực đơn trống rỗng"
 }

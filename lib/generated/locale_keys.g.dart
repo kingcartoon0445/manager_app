@@ -27,5 +27,6 @@ abstract class  LocaleKeys {
   static const localizedReason = 'localizedReason';
   static const AuthMessages = 'AuthMessages';
   static const biometricFail = 'biometricFail';
+  static const theMenuIsEmpty = 'theMenuIsEmpty';
 
 }

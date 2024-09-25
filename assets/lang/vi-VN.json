@@ -28,5 +28,10 @@
     "orderedFood":"Đã order món",
     "alreadyBooked":"Đã có người đặt",
     "noOneBookedYet":"Chưa có người đặt",
-    "codeFlutter": "mã Flutter"
+    "codeFlutter": "mã Flutter",
+    "theMenuIsEmpty":"Thực đơn trống rỗng",
+    "settingMenu":"Cài đặt thực đơn",
+    "createProductCategories":"Tạo loại món",
+    "createDishes":"Tạo món ăn",
+     "addUsingExcel":"Thêm bằng excel"
 }
