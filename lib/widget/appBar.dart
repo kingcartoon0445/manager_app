@@ -2,7 +2,8 @@ import 'package:manager_app/export_global.dart';
 
 PreferredSizeWidget AppBarGlobal(
     {required Widget title,
-    required BuildContext context,List<Widget>? action,
+    required BuildContext context,
+    List<Widget>? action,
     bool showBack = false}) {
   return AppBar(
     automaticallyImplyLeading: false,
@@ -15,11 +16,11 @@ PreferredSizeWidget AppBarGlobal(
             },
             child: Image.asset(
               "assets/icons/back.png",
-             scale: 2,
+              scale: 2,
             ),
           )
         : null,
-        actions: action,
+    actions: action,
     bottom: PreferredSize(
       preferredSize: const Size.fromHeight(1.0), // Chiều cao của đường kẻ
       child: Container(

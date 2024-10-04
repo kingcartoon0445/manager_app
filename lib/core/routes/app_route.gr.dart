@@ -34,11 +34,9 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     InfomationCustomerRoute.name: (routeData) {
-      final args = routeData.argsAs<InfomationCustomerRouteArgs>(
-          orElse: () => const InfomationCustomerRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: InfomationCustomerScreen(key: args.key),
+        child: const InfomationCustomerScreen(),
       );
     },
     ManagerCreateRoute.name: (routeData) {
@@ -60,9 +58,11 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     OperationsRoute.name: (routeData) {
+      final args = routeData.argsAs<OperationsRouteArgs>(
+          orElse: () => const OperationsRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: OperationsScreen(),
+        child: OperationsScreen(key: args.key),
       );
     },
   };
@@ -112,32 +112,16 @@ class HomeRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [InfomationCustomerScreen]
-class InfomationCustomerRoute
-    extends PageRouteInfo<InfomationCustomerRouteArgs> {
-  InfomationCustomerRoute({
-    Key? key,
-    List<PageRouteInfo>? children,
-  }) : super(
+class InfomationCustomerRoute extends PageRouteInfo<void> {
+  const InfomationCustomerRoute({List<PageRouteInfo>? children})
+      : super(
           InfomationCustomerRoute.name,
-          args: InfomationCustomerRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'InfomationCustomerRoute';
 
-  static const PageInfo<InfomationCustomerRouteArgs> page =
-      PageInfo<InfomationCustomerRouteArgs>(name);
-}
-
-class InfomationCustomerRouteArgs {
-  const InfomationCustomerRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'InfomationCustomerRouteArgs{key: $key}';
-  }
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -184,14 +168,29 @@ class NoMenuRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [OperationsScreen]
-class OperationsRoute extends PageRouteInfo<void> {
-  const OperationsRoute({List<PageRouteInfo>? children})
-      : super(
+class OperationsRoute extends PageRouteInfo<OperationsRouteArgs> {
+  OperationsRoute({
+    Key? key,
+    List<PageRouteInfo>? children,
+  }) : super(
           OperationsRoute.name,
+          args: OperationsRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'OperationsRoute';
 
-  static const PageInfo<void> page = PageInfo<void>(name);
+  static const PageInfo<OperationsRouteArgs> page =
+      PageInfo<OperationsRouteArgs>(name);
+}
+
+class OperationsRouteArgs {
+  const OperationsRouteArgs({this.key});
+
+  final Key? key;
+
+  @override
+  String toString() {
+    return 'OperationsRouteArgs{key: $key}';
+  }
 }

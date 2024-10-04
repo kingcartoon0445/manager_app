@@ -7,7 +7,6 @@ import 'package:manager_app/bloc/home/home_state.dart';
 import 'package:manager_app/gen/colors.gen.dart';
 
 import 'gridview_type_food.dart';
- 
 
 class CaroselListItem extends StatelessWidget {
   final int quantityTable;
@@ -18,7 +17,7 @@ class CaroselListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int _sumTable = quantityTable;
+    int sumTable = quantityTable;
     final homeBloc = BlocProvider.of<HomeBloc>(context);
     int quantityPage = int.parse((quantityTable / 6).round().toString());
     return Builder(
@@ -27,57 +26,54 @@ class CaroselListItem extends StatelessWidget {
         return Column(
           children: [
             // Generated code for this TextField Widget...
-            Container(
-              // margin: const EdgeInsets.fromLTRB(20, 20, 20, 0),
-              child: TextFormField(
-                // controller: _model.textController,
-                // focusNode: _model.textFieldFocusNode,
-                autofocus: false,
-                obscureText: false,
-                decoration: InputDecoration(
-                  isDense: true,
-                  hintText: 'Search your table',
-                  contentPadding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
-                  enabledBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(16),
+            TextFormField(
+              // controller: _model.textController,
+              // focusNode: _model.textFieldFocusNode,
+              autofocus: false,
+              obscureText: false,
+              decoration: InputDecoration(
+                isDense: true,
+                hintText: 'Search your table',
+                contentPadding: const EdgeInsets.fromLTRB(15, 0, 15, 0),
+                enabledBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
                   ),
-                  focusedBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      color: Color(0x00000000),
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  errorBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      // color: FlutterFlowTheme.of(context).error,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  focusedErrorBorder: OutlineInputBorder(
-                    borderSide: const BorderSide(
-                      // color: FlutterFlowTheme.of(context).error,
-                      width: 1,
-                    ),
-                    borderRadius: BorderRadius.circular(16),
-                  ),
-                  filled: true,
-                  fillColor: ColorName.colorGrey3,
-                  suffixIcon: const Icon(
-                    Icons.search,
-                    color: ColorName.colorGrey4,
-                    size: 28,
-                  ),
+                  borderRadius: BorderRadius.circular(16),
                 ),
-
-                // cursorColor: FlutterFlowTheme.of(context).primaryText,
-                // validator: _model.textControllerValidator.asValidator(context),
+                focusedBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    color: Color(0x00000000),
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                errorBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    // color: FlutterFlowTheme.of(context).error,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                focusedErrorBorder: OutlineInputBorder(
+                  borderSide: const BorderSide(
+                    // color: FlutterFlowTheme.of(context).error,
+                    width: 1,
+                  ),
+                  borderRadius: BorderRadius.circular(16),
+                ),
+                filled: true,
+                fillColor: ColorName.colorGrey3,
+                suffixIcon: const Icon(
+                  Icons.search,
+                  color: ColorName.colorGrey4,
+                  size: 28,
+                ),
               ),
+
+              // cursorColor: FlutterFlowTheme.of(context).primaryText,
+              // validator: _model.textControllerValidator.asValidator(context),
             ),
 
             Expanded(
@@ -97,7 +93,7 @@ class CaroselListItem extends StatelessWidget {
               items: [
                 for (int i = 0; i < quantityPage; i++)
                   if (i == quantityPage - 1) ...[
-                    GridViewTypeFood(quantityTable: _sumTable % 6, indexPage: i)
+                    GridViewTypeFood(quantityTable: sumTable % 6, indexPage: i)
                   ] else ...[
                     GridViewTypeFood(quantityTable: 6, indexPage: i)
                   ]
@@ -128,7 +124,7 @@ class CaroselListItem extends StatelessWidget {
                 );
               }),
             ),
-          // SizedBox(height: 20,)
+            // SizedBox(height: 20,)
           ],
         );
       },

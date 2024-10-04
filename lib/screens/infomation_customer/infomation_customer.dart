@@ -5,7 +5,7 @@ import 'package:intl/intl.dart';
 import 'package:manager_app/bloc/infomation_customer/export_infomation_customer_bloc.dart';
 import 'package:manager_app/bloc/infomation_customer/infomation_customer_bloc.dart';
 import 'package:manager_app/gen/colors.gen.dart';
-import 'package:manager_app/routes/app_route.dart';
+import 'package:manager_app/core/routes/app_route.dart';
 import 'package:manager_app/widget/appBar.dart';
 import 'package:manager_app/widget/theme_app.dart';
 
@@ -14,7 +14,7 @@ import 'widget/text_filed_information.dart';
 
 @RoutePage()
 class InfomationCustomerScreen extends StatelessWidget {
-  InfomationCustomerScreen({super.key});
+  const InfomationCustomerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +23,7 @@ class InfomationCustomerScreen extends StatelessWidget {
     TextEditingController adressController = TextEditingController();
     TextEditingController numOfPeopleController = TextEditingController();
     TextEditingController numberOfTableController = TextEditingController();
-    void _showDialog(Widget child) {
+    void showDialog(Widget child) {
       showCupertinoModalPopup<void>(
         context: context,
         builder: (BuildContext context) => Container(
@@ -68,7 +68,7 @@ class InfomationCustomerScreen extends StatelessWidget {
       ),
       body: InkWell(
         onTap: () {
-          FocusScope.of(context).requestFocus(new FocusNode());
+          FocusScope.of(context).requestFocus(FocusNode());
         },
         child: Padding(
           padding: const EdgeInsets.all(20.0),
@@ -122,7 +122,7 @@ class InfomationCustomerScreen extends StatelessWidget {
                           InkWell(
                             // padding:EdgeInsets.zero,
                             // Display a CupertinoDatePicker in date picker mode.
-                            onTap: () => _showDialog(
+                            onTap: () => showDialog(
                               CupertinoDatePicker(
                                 initialDateTime: state.dateTime,
                                 mode: CupertinoDatePickerMode.date,
@@ -154,7 +154,7 @@ class InfomationCustomerScreen extends StatelessWidget {
                           Text('Time', style: context.textTheme.miniLabelSmall),
                           InkWell(
                             // Display a CupertinoDatePicker in time picker mode.
-                            onTap: () => _showDialog(
+                            onTap: () => showDialog(
                               CupertinoDatePicker(
                                 initialDateTime: state.dateTime,
                                 mode: CupertinoDatePickerMode.time,

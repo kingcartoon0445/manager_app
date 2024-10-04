@@ -5,10 +5,10 @@ import 'package:manager_app/screens/infomation_customer/infomation_customer.dart
 import 'package:manager_app/screens/manager_create/manager_create.dart';
 import 'package:manager_app/screens/menu_type_food/widget/no_menu.dart';
 
-import '../screens/counter/counter_screen.dart';
-import '../screens/database_screen/database_screen.dart';
-import '../screens/home/home_screen.dart';
-import '../screens/menu_type_food/menu_type_food.dart';
+import '../../screens/counter/counter_screen.dart';
+import '../../screens/database_screen/database_screen.dart';
+import '../../screens/home/home_screen.dart';
+import '../../screens/menu_type_food/menu_type_food.dart';
 
 part 'app_route.gr.dart';
 
@@ -20,16 +20,16 @@ class AppRouter extends _$AppRouter {
         AutoRoute(
           page: CounterRoute.page,
         ),
-         AutoRoute(
+        AutoRoute(
           page: InfomationCustomerRoute.page,
         ),
         AutoRoute(
-          page: MenuTypeFoodRoute.page, 
+          page: MenuTypeFoodRoute.page,
         ),
-         AutoRoute(
+        AutoRoute(
           page: OperationsRoute.page,
         ),
-         AutoRoute(
+        AutoRoute(
           page: ManagerCreateRoute.page,
         ),
         AutoRoute(

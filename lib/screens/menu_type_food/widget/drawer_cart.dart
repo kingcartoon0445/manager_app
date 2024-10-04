@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-
 import '../../../export_global.dart';
 
 class DrawerCart extends StatelessWidget {
@@ -18,18 +16,16 @@ class DrawerCart extends StatelessWidget {
           DrawerHeader(
             decoration: const BoxDecoration(),
             child: Column(
-              children:  [
+              children: [
                 Expanded(
                     child: Center(
-                        child: Text(
-                  'Your order',
-                  style: context.textTheme.displayLarge
-                ))),
+                        child: Text('Your order',
+                            style: context.textTheme.displayLarge))),
               ],
             ),
           ),
           Container(
-              margin: EdgeInsets.all(20),
+              margin: const EdgeInsets.all(20),
               decoration: BoxDecoration(
                 color: ColorName.white,
                 boxShadow: const [
@@ -52,11 +48,9 @@ class DrawerCart extends StatelessWidget {
                   ),
                   const Row(
                     children: [
-                      Column(children: [
-                        Text("Thịt đùi"),
-                        Text("10.00")
-                      ],),
-                   
+                      Column(
+                        children: [Text("Thịt đùi"), Text("10.00")],
+                      ),
                     ],
                   )
                 ],

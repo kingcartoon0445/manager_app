@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:manager_app/export_global.dart';
 import 'package:manager_app/widget/appBar.dart';
 
@@ -29,17 +28,10 @@ class MenuTypeFoodScreen extends StatelessWidget {
                       "assets/icons/nia.png",
                       height: 45,
                     ),
-                      Text(
-                      "Select to",
-                      style:
-                          context.textTheme.headlineMedium
-                    )
+                    Text("Select to", style: context.textTheme.headlineMedium)
                   ],
                 ),
-                 Text(
-                  "YOUR FOOD",
-                  style: context.textTheme.displayLarge
-                ),
+                Text("YOUR FOOD", style: context.textTheme.displayLarge),
                 const SizedBox(
                   height: 10,
                 )
@@ -62,7 +54,6 @@ class MenuTypeFoodScreen extends StatelessWidget {
               )
             ],
           ),
-          
           endDrawer: const DrawerCart(),
           body: Padding(
             padding: const EdgeInsets.all(20.0),

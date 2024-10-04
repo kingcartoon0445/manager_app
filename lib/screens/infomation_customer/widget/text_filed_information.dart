@@ -30,7 +30,7 @@ class TextFiledInformation extends StatelessWidget {
           controller: controller,
           style:
               context.textTheme.headlineLarge!.copyWith(color: ColorName.black),
-          keyboardType: typeInput == null ? TextInputType.text : typeInput,
+          keyboardType: typeInput ?? TextInputType.text,
           decoration: InputDecoration(
             hintMaxLines: 1,
             labelText: labelText,

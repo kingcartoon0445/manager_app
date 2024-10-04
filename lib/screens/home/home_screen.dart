@@ -1,9 +1,5 @@
-import 'package:auto_route/auto_route.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:manager_app/export_global.dart';
-import 'package:manager_app/gen/colors.gen.dart';
-import 'package:manager_app/routes/app_route.dart';
+import 'package:manager_app/core/routes/app_route.dart';
 import '../../widget/appBar.dart';
 import 'widget/page_tables.dart';
 
@@ -14,25 +10,23 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar:AppBarGlobal(
+        appBar: AppBarGlobal(
           context: context,
           title: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
             children: [
               InkWell(
-                onTap: (){
-                  print("duy uýd");
-                context.router.push(  const ManagerCreateRoute());  
-                },
-                child: Image.asset("assets/icons/setting.png")),
+                  onTap: () {
+                    print("duy uýd");
+                    context.router.push(const ManagerCreateRoute());
+                  },
+                  child: Image.asset("assets/icons/setting.png")),
               ListTile(
                 title: Center(
-                    child: Text(
-                  'FOOD & LIFE',
-                  style: context.textTheme.displayLarge!.copyWith(color: ColorName.black,)
-                  
-              
-                )),
+                    child: Text('FOOD & LIFE',
+                        style: context.textTheme.displayLarge!.copyWith(
+                          color: ColorName.black,
+                        ))),
                 subtitle: Center(
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -45,10 +39,10 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(
                         width: 3,
                       ),
-                       Text(
+                      Text(
                         "Haidilao Huoguo 海底捞火锅 Vincom Phan Văn Trị",
-                        style:
-                        context.textTheme.labelSmall!.copyWith( color: ColorName.colorGrey2, fontSize: 10),
+                        style: context.textTheme.labelSmall!.copyWith(
+                            color: ColorName.colorGrey2, fontSize: 10),
                       )
                     ],
                   ),
@@ -58,10 +52,8 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               )
             ],
-          ), 
-         ),
-        
-          
+          ),
+        ),
         body: PageTables(
           quantityTable: 8,
         ));

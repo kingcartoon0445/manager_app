@@ -1,5 +1,3 @@
-import 'package:manager_app/gen/assets.gen.dart';
-
 import '../../../export_global.dart';
 
 class ItemFoodType extends StatelessWidget {
@@ -15,7 +13,8 @@ class ItemFoodType extends StatelessWidget {
         Center(
             child: Text(
           globalData.categories[index].name,
-          style: context.textTheme.titleLarge  ,overflow: TextOverflow.ellipsis,
+          style: context.textTheme.titleLarge,
+          overflow: TextOverflow.ellipsis,
           textAlign: TextAlign.center,
         ))
       ],

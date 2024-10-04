@@ -11,15 +11,19 @@ class NoMenuScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset(Assets.images.noMenu.path,height: 100,),
-          const SizedBox(height: 20,),
-          Text(
-            "theMenuIsEmpty".tr(),
-            style:context.textTheme.titleLarge!.copyWith( color: ColorName.colorGrey4)
-            
-            
+          Image.asset(
+            Assets.images.noMenu.path,
+            height: 100,
           ),
-           const SizedBox(height: 20,),
+          const SizedBox(
+            height: 20,
+          ),
+          Text("theMenuIsEmpty".tr(),
+              style: context.textTheme.titleLarge!
+                  .copyWith(color: ColorName.colorGrey4)),
+          const SizedBox(
+            height: 20,
+          ),
           Container(
             height: 70,
             width: 180,
@@ -28,12 +32,11 @@ class NoMenuScreen extends StatelessWidget {
               color: ColorName.colorGrey3,
             ),
             child: Center(
-                child: Text(
-              "settingMenu".tr()+" !",
-              style: context.textTheme.titleLarge!.copyWith(    color: ColorName.colorGrey4,)
-              
-             
-            ),),
+              child: Text("${"settingMenu".tr()} !",
+                  style: context.textTheme.titleLarge!.copyWith(
+                    color: ColorName.colorGrey4,
+                  )),
+            ),
           )
         ],
       ),

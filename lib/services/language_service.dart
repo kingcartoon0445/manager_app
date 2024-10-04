@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:injectable/injectable.dart';
 
-import '../config/base_stream_controller.dart';
-import '../config/local_storage.dart';
+import '../core/config/base_stream_controller.dart';
+import '../core/config/local_storage.dart';
 import '../main.dart';
 
 const vietnamCode = 'vi';
