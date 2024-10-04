@@ -15,10 +15,10 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
-    ConformBookingRoute.name: (routeData) {
+    ConfirmBookingRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const ConformBookingScreen(),
+        child: const ConfirmBookingScreen(),
       );
     },
     CounterRoute.name: (routeData) {
@@ -58,26 +58,24 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
     OperationsRoute.name: (routeData) {
-      final args = routeData.argsAs<OperationsRouteArgs>(
-          orElse: () => const OperationsRouteArgs());
       return AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: OperationsScreen(key: args.key),
+        child: const OperationsScreen(),
       );
     },
   };
 }
 
 /// generated route for
-/// [ConformBookingScreen]
-class ConformBookingRoute extends PageRouteInfo<void> {
-  const ConformBookingRoute({List<PageRouteInfo>? children})
+/// [ConfirmBookingScreen]
+class ConfirmBookingRoute extends PageRouteInfo<void> {
+  const ConfirmBookingRoute({List<PageRouteInfo>? children})
       : super(
-          ConformBookingRoute.name,
+          ConfirmBookingRoute.name,
           initialChildren: children,
         );
 
-  static const String name = 'ConformBookingRoute';
+  static const String name = 'ConfirmBookingRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
@@ -168,29 +166,14 @@ class NoMenuRoute extends PageRouteInfo<void> {
 
 /// generated route for
 /// [OperationsScreen]
-class OperationsRoute extends PageRouteInfo<OperationsRouteArgs> {
-  OperationsRoute({
-    Key? key,
-    List<PageRouteInfo>? children,
-  }) : super(
+class OperationsRoute extends PageRouteInfo<void> {
+  const OperationsRoute({List<PageRouteInfo>? children})
+      : super(
           OperationsRoute.name,
-          args: OperationsRouteArgs(key: key),
           initialChildren: children,
         );
 
   static const String name = 'OperationsRoute';
 
-  static const PageInfo<OperationsRouteArgs> page =
-      PageInfo<OperationsRouteArgs>(name);
-}
-
-class OperationsRouteArgs {
-  const OperationsRouteArgs({this.key});
-
-  final Key? key;
-
-  @override
-  String toString() {
-    return 'OperationsRouteArgs{key: $key}';
-  }
+  static const PageInfo<void> page = PageInfo<void>(name);
 }

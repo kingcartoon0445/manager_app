@@ -4,8 +4,10 @@ PreferredSizeWidget AppBarGlobal(
     {required Widget title,
     required BuildContext context,
     List<Widget>? action,
-    bool showBack = false}) {
+    bool showBack = false,
+    bool centerTitle = false}) {
   return AppBar(
+    centerTitle: centerTitle,
     automaticallyImplyLeading: false,
     toolbarHeight: 140,
     title: title,

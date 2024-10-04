@@ -35,7 +35,7 @@ class TextFiledInformation extends StatelessWidget {
             hintMaxLines: 1,
             labelText: labelText,
             border: InputBorder.none,
-            labelStyle: context.textTheme.headlineLarge!
+            labelStyle: context.textTheme.headlineMedium!
                 .copyWith(color: ColorName.black),
             floatingLabelStyle:
                 context.textTheme.labelSmall!.copyWith(color: ColorName.black),

@@ -94,13 +94,13 @@ class _MyAppState extends State<MyApp> {
               headlineLarge:
                   TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               headlineMedium:
-                  TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                  TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
               headlineSmall:
-                  TextStyle(fontSize: 20, fontWeight: FontWeight.normal),
+                  TextStyle(fontSize: 14, fontWeight: FontWeight.normal),
               titleLarge: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              titleMedium: TextStyle(fontSize: 16, fontWeight: FontWeight.w600),
+              titleMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
               titleSmall:
-                  TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
+                  TextStyle(fontSize: 12, fontWeight: FontWeight.normal),
               bodyLarge: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
               bodyMedium: TextStyle(fontSize: 14, fontWeight: FontWeight.w600),
               bodySmall: TextStyle(fontSize: 14, fontWeight: FontWeight.normal),

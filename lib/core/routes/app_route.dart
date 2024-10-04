@@ -1,6 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:manager_app/screens/conform_booking/conform_booking.dart';
+import 'package:manager_app/screens/conform_booking/confirm_booking.dart';
 import 'package:manager_app/screens/infomation_customer/infomation_customer.dart';
 import 'package:manager_app/screens/manager_create/manager_create.dart';
 import 'package:manager_app/screens/menu_type_food/widget/no_menu.dart';
@@ -33,7 +33,7 @@ class AppRouter extends _$AppRouter {
           page: ManagerCreateRoute.page,
         ),
         AutoRoute(
-          page: ConformBookingRoute.page,
+          page: ConfirmBookingRoute.page,
         ),
       ];
 }
